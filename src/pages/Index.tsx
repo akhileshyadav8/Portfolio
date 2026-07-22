@@ -6,6 +6,7 @@ import { supabase, isSupabaseConfigured } from "@/integrations/supabase/client";
 import PageWrapper from "@/components/PageWrapper";
 import akhileshImg from "@/assets/akhilesh.png";
 import { portfolioData } from "@/data/portfolioData";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
 const Index = () => {
   const { data: projects } = useQuery({
@@ -215,7 +216,6 @@ const Index = () => {
                   </div>
                   <div className="h-px bg-border" />
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-muted-foreground min-w-[80px]">Projects</span>
                     <span className="text-sm text-foreground font-medium text-right">{portfolioData.profile.stats.projects}+</span>
                   </div>
                   <div className="h-px bg-border" />
@@ -273,31 +273,62 @@ const Index = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="bento-card group"
+                    className="bento-card group flex flex-col justify-between"
                   >
-                    <div className="flex flex-wrap gap-1.5 mb-3">
-                      {(project.tags ?? []).map((tag) => (
-                        <span key={tag} className="text-[10px] px-2 py-0.5 rounded-full bg-primary/10 text-primary font-medium uppercase tracking-wider">
-                          {tag}
-                        </span>
-                      ))}
+                    <div>
+                      <div className="flex flex-wrap gap-1.5 mb-3">
+                        {(project.tags ?? []).map((tag) => (
+                          <span key={tag} className="text-[10px] px-2 py-0.5 rounded-full bg-primary/10 text-primary font-medium uppercase tracking-wider">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                      <h3 className="text-lg font-display font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                        {project.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground mb-4 line-clamp-3">{project.description}</p>
                     </div>
-                    <h3 className="text-lg font-display font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
-                      {project.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground mb-4 line-clamp-2">{project.description}</p>
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between mt-4 pt-3 border-t border-border/35">
                       <div className="flex flex-wrap gap-1.5">
                         {(project.technologies ?? []).slice(0, 3).map((t) => (
                           <span key={t} className="text-xs px-2 py-0.5 rounded-lg bg-secondary text-secondary-foreground">{t}</span>
                         ))}
                       </div>
-                      <div className="flex gap-2">
+                      <div className="flex items-center gap-3">
                         {project.github_url && (
-                          <a href={project.github_url} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Github size={14} /></a>
+                          <a href={project.github_url} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" title="View Source Code">
+                            <Github size={14} />
+                          </a>
                         )}
-                        {project.demo_url && (
-                          <a href={project.demo_url} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><ExternalLink size={14} /></a>
+                        {project.iframe_url ? (
+                          <Dialog>
+                            <DialogTrigger asChild>
+                              <button className="text-primary hover:opacity-80 transition-opacity flex items-center gap-1 text-xs font-medium" title="Interact with Dashboard">
+                                <ExternalLink size={14} />
+                                <span>Interactive Demo</span>
+                              </button>
+                            </DialogTrigger>
+                            <DialogContent className="max-w-4xl w-[90vw] h-[80vh] flex flex-col p-4 bg-background border border-border">
+                              <DialogHeader>
+                                <DialogTitle className="font-display font-bold text-lg">{project.title} - Interactive Dashboard</DialogTitle>
+                              </DialogHeader>
+                              <div className="flex-1 w-full h-full rounded-lg overflow-hidden border border-border mt-2 bg-muted/20">
+                                <iframe
+                                  src={project.iframe_url}
+                                  className="w-full h-full"
+                                  frameBorder="0"
+                                  allowFullScreen={true}
+                                  title={project.title}
+                                />
+                              </div>
+                            </DialogContent>
+                          </Dialog>
+                        ) : (
+                          project.demo_url && (
+                            <a href={project.demo_url} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" title="View Demo">
+                              <ExternalLink size={14} />
+                            </a>
+                          )
                         )}
                       </div>
                     </div>

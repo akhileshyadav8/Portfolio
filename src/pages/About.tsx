@@ -19,12 +19,12 @@ const timeline = [
 ];
 
 const expertise = [
-  { title: "Data Analysis", desc: "Exploratory Data Analysis (EDA), Data Wrangling, Statistical Analysis, Data Cleaning" },
-  { title: "Databases", desc: "Designing and querying relational databases using SQL/MySQL and NoSQL databases like MongoDB" },
-  { title: "Machine Learning", desc: "Implementing regression and classification algorithms, feature engineering, and model evaluation" },
-  { title: "Data Visualization", desc: "Creating dashboards and data stories using Power BI, Excel, and Tableau" },
-  { title: "Libraries", desc: "Developing analytical workflows using Pandas, NumPy, Matplotlib, Seaborn, and Scikit-learn" },
-  { title: "Backend & APIs", desc: "Building scalable backend services and APIs using FastAPI and Pydantic" },
+  { title: "Machine Learning", desc: "Supervised and unsupervised learning, regression, classification, feature engineering, and model optimization" },
+  { title: "Deep Learning", desc: "Neural networks, CNNs, RNNs, and custom model architectures for complex datasets" },
+  { title: "Natural Language Processing (NLP)", desc: "Text classification, semantic search, language processing, and text analysis" },
+  { title: "Computer Vision", desc: "Image analysis, object detection, and visual data preprocessing pipelines" },
+  { title: "Data Analysis & BI", desc: "Exploratory Data Analysis (EDA), statistical modeling, and interactive dashboards in Power BI and Tableau" },
+  { title: "Databases & APIs", desc: "Designing database structures (SQL/NoSQL) and building robust backend services using FastAPI" },
 ];
 
 const About = () => (

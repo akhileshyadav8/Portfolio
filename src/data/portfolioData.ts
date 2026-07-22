@@ -6,6 +6,7 @@ export interface Project {
   technologies: string[];
   github_url: string | null;
   demo_url: string | null;
+  iframe_url?: string | null;
   published: boolean;
   sort_order: number;
 }
@@ -56,7 +57,7 @@ export const portfolioData = {
     stats: {
       education: "M.Sc. Data Science",
       specialization: "Data Analytics",
-      projects: 3,
+      projects: 5,
       focus: "Machine Learning & BI"
     }
   },
@@ -66,23 +67,27 @@ export const portfolioData = {
     
     // Data Science / ML
     { id: "s2", name: "Machine Learning", proficiency: 88, category: "Data Science", sort_order: 2, icon_name: "Brain" },
-    { id: "s3", name: "Exploratory Data Analysis (EDA)", proficiency: 95, category: "Data Science", sort_order: 3, icon_name: "Brain" },
-    { id: "s4", name: "Pandas & NumPy", proficiency: 93, category: "Data Science", sort_order: 4, icon_name: "Brain" },
-    { id: "s5", name: "Matplotlib & Seaborn", proficiency: 90, category: "Data Science", sort_order: 5, icon_name: "Brain" },
-    { id: "s6", name: "Scikit-Learn", proficiency: 85, category: "Data Science", sort_order: 6, icon_name: "Brain" },
-    { id: "s7", name: "Statistical Modeling", proficiency: 85, category: "Data Science", sort_order: 7, icon_name: "Brain" },
+    { id: "s2_dl", name: "Deep Learning", proficiency: 82, category: "Data Science", sort_order: 3, icon_name: "Brain" },
+    { id: "s2_nlp", name: "Natural Language Processing (NLP)", proficiency: 80, category: "Data Science", sort_order: 4, icon_name: "Brain" },
+    { id: "s2_cv", name: "Computer Vision", proficiency: 78, category: "Data Science", sort_order: 5, icon_name: "Brain" },
+    { id: "s2_fe", name: "Feature Engineering", proficiency: 85, category: "Data Science", sort_order: 6, icon_name: "Brain" },
+    { id: "s3", name: "Exploratory Data Analysis (EDA)", proficiency: 95, category: "Data Science", sort_order: 7, icon_name: "Brain" },
+    { id: "s4", name: "Pandas & NumPy", proficiency: 93, category: "Data Science", sort_order: 8, icon_name: "Brain" },
+    { id: "s5", name: "Matplotlib & Seaborn", proficiency: 90, category: "Data Science", sort_order: 9, icon_name: "Brain" },
+    { id: "s6", name: "Scikit-Learn", proficiency: 85, category: "Data Science", sort_order: 10, icon_name: "Brain" },
+    { id: "s7", name: "Statistical Modeling", proficiency: 85, category: "Data Science", sort_order: 11, icon_name: "Brain" },
     
     // Tools & Databases
-    { id: "s8", name: "SQL (MySQL, MongoDB)", proficiency: 90, category: "Tools", sort_order: 8, icon_name: "Database" },
-    { id: "s9", name: "Power BI & Tableau", proficiency: 90, category: "Tools", sort_order: 9, icon_name: "Database" },
-    { id: "s10", name: "Streamlit", proficiency: 88, category: "Tools", sort_order: 10, icon_name: "Database" },
-    { id: "s11", name: "Git & GitHub", proficiency: 85, category: "Tools", sort_order: 11, icon_name: "Database" },
-    { id: "s12", name: "Excel Dashboarding", proficiency: 85, category: "Tools", sort_order: 12, icon_name: "Database" },
-    { id: "s13", name: "AWS EC2 Deployment", proficiency: 75, category: "Tools", sort_order: 13, icon_name: "Database" },
+    { id: "s8", name: "SQL (MySQL, MongoDB)", proficiency: 90, category: "Tools", sort_order: 12, icon_name: "Database" },
+    { id: "s9", name: "Power BI & Tableau", proficiency: 90, category: "Tools", sort_order: 13, icon_name: "Database" },
+    { id: "s10", name: "Streamlit", proficiency: 88, category: "Tools", sort_order: 14, icon_name: "Database" },
+    { id: "s11", name: "Git & GitHub", proficiency: 85, category: "Tools", sort_order: 15, icon_name: "Database" },
+    { id: "s12", name: "Excel Dashboarding", proficiency: 85, category: "Tools", sort_order: 16, icon_name: "Database" },
+    { id: "s13", name: "AWS EC2 Deployment", proficiency: 75, category: "Tools", sort_order: 17, icon_name: "Database" },
 
     // MLOps & Backend
-    { id: "s14", name: "FastAPI & Pydantic", proficiency: 80, category: "MLOps", sort_order: 14, icon_name: "Settings" },
-    { id: "s15", name: "Docker Containerization", proficiency: 78, category: "MLOps", sort_order: 15, icon_name: "Settings" }
+    { id: "s14", name: "FastAPI & Pydantic", proficiency: 80, category: "MLOps", sort_order: 18, icon_name: "Settings" },
+    { id: "s15", name: "Docker Containerization", proficiency: 78, category: "MLOps", sort_order: 19, icon_name: "Settings" }
   ] as Skill[],
   
   projects: [
@@ -92,32 +97,56 @@ export const portfolioData = {
       description: "Analyzed 10,000+ groundwater records across 23 districts of Punjab from 1994–2024 to identify depletion trends. Developed regression models to forecast groundwater levels for 2025–2030 with ~91% prediction accuracy. Built an interactive Streamlit dashboard with temporal and geospatial visualizations for trend analysis.",
       tags: ["Machine Learning", "Streamlit", "Python", "Data Science"],
       technologies: ["Python", "Scikit-Learn", "Streamlit", "Pandas", "Matplotlib"],
-      github_url: "https://github.com/akhileshyadav8",
+      github_url: "https://github.com/akhileshyadav8/Punjab-Groundwater-Depletion-Analysis-and-Prediction",
       demo_url: null,
       published: true,
       sort_order: 1
     },
     {
       id: "p2",
-      title: "Walmart Sales Analysis",
-      description: "Used SQL queries and Python to analyze sales transactions and identify revenue trends, customer behavior, and top performing product categories. Built an interactive Power BI dashboard with KPIs, sales trends, and business intelligence insights for regional performance analysis. Performed data cleaning and exploratory analysis to support business-focused decision making.",
-      tags: ["Data Analytics", "Power BI", "SQL", "Python"],
-      technologies: ["SQL", "Python", "Power BI", "Pandas"],
-      github_url: "https://github.com/akhileshyadav8",
+      title: "Spotify Analytics PowerBI Dashboard",
+      description: "Built a dynamic and interactive Power BI dashboard analyzing Spotify streaming history and music catalog. Engineered data modeling and DAX measures to track listening hours, top artists, genre distributions, and song popularity over time, providing valuable behavioral and music preference insights.",
+      tags: ["Power BI", "Data Analytics", "Music Analytics"],
+      technologies: ["Power BI", "DAX", "Power Query", "Excel"],
+      github_url: "https://github.com/akhileshyadav8/Spotify-Analytics-PowerBI-Dashboard",
       demo_url: null,
+      // Using a working Microsoft Power BI public sample dashboard as a showcase placeholder
+      iframe_url: "https://app.powerbi.com/view?r=eyJrIjoiZjY0ZTIyMWEtYmQ3Ny00NDY4LTkwYzYtZjdmOTMyMzA2YTIyIiwidCI6ImM3YmUxZjRkLTRjNTUtNDQ0MC05NzI1LTQ1YmY5MWNjN2M2OSJ9",
       published: true,
       sort_order: 2
     },
     {
       id: "p3",
+      title: "Walmart Sales Analysis",
+      description: "Used SQL queries and Python to analyze sales transactions and identify revenue trends, customer behavior, and top performing product categories. Built an interactive Power BI dashboard with KPIs, sales trends, and business intelligence insights for regional performance analysis. Performed data cleaning and exploratory analysis to support business-focused decision making.",
+      tags: ["Data Analytics", "Power BI", "SQL", "Python"],
+      technologies: ["SQL", "Python", "Power BI", "Pandas"],
+      github_url: "https://github.com/akhileshyadav8/Walmart-Analysis-Python-SQL-PowerBI",
+      demo_url: null,
+      published: true,
+      sort_order: 3
+    },
+    {
+      id: "p4",
       title: "Uber Rides Analysis",
       description: "Performed exploratory data analysis to identify peak hours, demand patterns, and ride usage trends. Created visualizations using Matplotlib and Seaborn to analyze time-based ride distribution patterns.",
       tags: ["EDA", "Python", "Data Analytics"],
       technologies: ["Python", "Pandas", "Matplotlib", "Seaborn"],
-      github_url: "https://github.com/akhileshyadav8",
+      github_url: "https://github.com/akhileshyadav8/Uber-Rides-Analysis",
       demo_url: null,
       published: true,
-      sort_order: 3
+      sort_order: 4
+    },
+    {
+      id: "p5",
+      title: "Amazon Prime Video PowerBi Dashboard",
+      description: "Designed an interactive Power BI dashboard analyzing Amazon Prime Video content catalog. Cleaned and structured the dataset to present distributions of content type (movies vs TV shows), content ratings, release year trends, and genre heatmaps to uncover platform catalog statistics.",
+      tags: ["Power BI", "Data Visualization", "Content Analytics"],
+      technologies: ["Power BI", "DAX", "Data Cleaning"],
+      github_url: "https://github.com/akhileshyadav8/Amazon-Prime-Video-PowerBi-Dashboard",
+      demo_url: null,
+      published: true,
+      sort_order: 5
     }
   ] as Project[],
   
@@ -127,7 +156,7 @@ export const portfolioData = {
       title: "IBM Data Analyst Professional Certificate",
       institution: "Coursera",
       completion_date: "2025",
-      verification_url: "https://coursera.org",
+      verification_url: "https://www.coursera.org/account/accomplishments/specialization/certificate/FQ0EJDEH69B2",
       image_url: null,
       sort_order: 1
     },
@@ -136,7 +165,7 @@ export const portfolioData = {
       title: "SQL (Advanced)",
       institution: "HackerRank",
       completion_date: "2025",
-      verification_url: "https://hackerrank.com",
+      verification_url: "https://www.hackerrank.com/certificates/82d07ffa52a3",
       image_url: null,
       sort_order: 2
     },
@@ -145,7 +174,7 @@ export const portfolioData = {
       title: "Business Intelligence Tool: Power BI",
       institution: "Veer Narmad South Gujarat University",
       completion_date: "2025",
-      verification_url: null,
+      verification_url: "https://drive.google.com/file/d/1aUPR6wpA960u4CCXV77MRT0B08YYx1LE/view",
       image_url: null,
       sort_order: 3
     }
