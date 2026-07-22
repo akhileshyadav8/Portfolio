@@ -68,21 +68,6 @@ The portfolio has a single source of truth for static data. You do not need to r
 - Edit the `certifications` array (add your institutions, dates, and verification links).
 - Replace the profile photo in [src/assets/akhilesh.png](src/assets/akhilesh.png) with your own picture (using the same file name or updating the import in `Index.tsx`).
 - Replace the PDF in `public/Resume.pdf` with your own resume file.
-
----
-
-## 📊 How to Get a Power BI Iframe Embed Link
-To display an interactive dashboard modal for your Power BI projects:
-1. Open your report in the **Power BI Service** (`https://app.powerbi.com`).
-2. Navigate to the dashboard workspace.
-3. Click on the top menu: **File** ➡️ **Embed report** ➡️ **Publish to web (public)**.
-   > ⚠️ **Important**: Do not use "Website or portal", as that requires viewers to sign in with an organizational Office 365 account. "Publish to web (public)" makes it accessible to anyone viewing your portfolio.
-4. Copy the URL inside the **"Link you can send in email"** field (or copy the URL from the `src` attribute of the HTML `<iframe>` code).
-5. Open [src/data/portfolioData.ts](src/data/portfolioData.ts) and paste this URL into the project's `iframe_url` property:
-   ```typescript
-   iframe_url: "https://app.powerbi.com/view?r=YOUR_COPIED_TOKEN_HERE"
-   ```
-
 ---
 
 ## 🌐 How to Host Your Portfolio
