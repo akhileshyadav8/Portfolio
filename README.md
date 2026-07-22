@@ -102,15 +102,14 @@ vercel --prod
 
 ---
 
-## 📁 Git Repository Upload Instructions
+# Author (Connect With Me)
 
-```bash
-# Add your GitHub repository URL as remote
-git remote add origin <YOUR_GITHUB_REPO_URL>
+**Akhilesh Yadav**
 
-# Set primary branch to main
-git branch -M main
+M.Sc Data Science
 
-# Push the committed files
-git push -u origin main
-```
+- **LinkedIn:** https://www.linkedin.com/in/akhilesh-yadav88/
+- **Portfolio:** https://akhileshyadav8.github.io/
+- **Email:** yadavakhil766@gmail.com
+
+---
