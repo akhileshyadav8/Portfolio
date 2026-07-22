@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -17,6 +17,26 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
 
+  const [theme, setTheme] = useState(() => {
+    // Default to dark mode as it fits the premium look best
+    const saved = localStorage.getItem("theme");
+    return saved || "dark";
+  });
+
+  useEffect(() => {
+    const root = window.document.documentElement;
+    if (theme === "dark") {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+    }
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50">
       <div className="mx-4 mt-3">
@@ -26,27 +46,43 @@ const Navbar = () => {
               AY
             </Link>
 
-            {/* Desktop */}
-            <div className="hidden md:flex items-center gap-1">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.to}
-                  to={link.to}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
-                    location.pathname === link.to
-                      ? "text-primary bg-primary/10"
-                      : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
+            <div className="flex items-center gap-3">
+              {/* Desktop Navigation */}
+              <div className="hidden md:flex items-center gap-1">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.to}
+                    to={link.to}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                      location.pathname === link.to
+                        ? "text-primary bg-primary/10"
+                        : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
 
-            {/* Mobile toggle */}
-            <button onClick={() => setOpen(!open)} className="md:hidden text-foreground p-2 rounded-lg hover:bg-secondary/50 transition-colors">
-              {open ? <X size={20} /> : <Menu size={20} />}
-            </button>
+              {/* Theme Toggle Button */}
+              <button 
+                onClick={toggleTheme} 
+                className="p-2 rounded-lg bg-secondary/50 text-foreground hover:text-primary transition-colors flex items-center justify-center border border-border/30"
+                title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+                aria-label="Toggle theme"
+              >
+                {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
+              </button>
+
+              {/* Mobile menu toggle */}
+              <button 
+                onClick={() => setOpen(!open)} 
+                className="md:hidden text-foreground p-2 rounded-lg hover:bg-secondary/50 transition-colors"
+                aria-label="Toggle navigation menu"
+              >
+                {open ? <X size={20} /> : <Menu size={20} />}
+              </button>
+            </div>
           </div>
 
           {/* Mobile menu */}
