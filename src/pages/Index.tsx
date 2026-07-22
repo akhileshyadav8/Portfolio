@@ -216,6 +216,7 @@ const Index = () => {
                   </div>
                   <div className="h-px bg-border" />
                   <div className="flex items-center justify-between">
+                    <span className="text-sm text-muted-foreground min-w-[80px]">Projects</span>
                     <span className="text-sm text-foreground font-medium text-right">{portfolioData.profile.stats.projects}+</span>
                   </div>
                   <div className="h-px bg-border" />
