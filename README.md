@@ -106,8 +106,6 @@ vercel --prod
 
 **Akhilesh Yadav**
 
-M.Sc Data Science
-
 - **LinkedIn:** https://www.linkedin.com/in/akhilesh-yadav88/
 - **Portfolio:** https://akhileshyadav8.github.io/
 - **Email:** yadavakhil766@gmail.com
