@@ -111,7 +111,7 @@ export const portfolioData = {
       github_url: "https://github.com/akhileshyadav8/Spotify-Analytics-PowerBI-Dashboard",
       demo_url: null,
       // Using a working Microsoft Power BI public sample dashboard as a showcase placeholder
-      iframe_url: "https://app.powerbi.com/view?r=eyJrIjoiZjY0ZTIyMWEtYmQ3Ny00NDY4LTkwYzYtZjdmOTMyMzA2YTIyIiwidCI6ImM3YmUxZjRkLTRjNTUtNDQ0MC05NzI1LTQ1YmY5MWNjN2M2OSJ9",
+      iframe_url: "https://app.powerbi.com/view?r=eyJrIjoiYTMxNjFjNmItZmE0Zi00Nzc4LTgwNzItODlhMDhhM2ZmZDk2IiwidCI6IjM0YmQ4YmVkLTJhYzEtNDFhZS05ZjA4LTRlMGEzZjExNzA2YyJ9",
       published: true,
       sort_order: 2
     },
