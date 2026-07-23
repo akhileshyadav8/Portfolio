@@ -169,19 +169,18 @@ If you found this portfolio helpful, consider giving this repository a ⭐.
 
 ## 🤝 Connect With Me
 
-<span align="center">
-  🌐
-  <a href="https://akhileshyadav-portfolio-theta.vercel.app" target="_blank">Portfolio</a>
+<p>
+  🌐 <a href="https://akhileshyadav-portfolio-theta.vercel.app" target="_blank">Portfolio</a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://raw.githubusercontent.com/LelouchFR/skill-icons/main/assets/linkedin.svg" width="22" align="center"/>
+  <img src="https://raw.githubusercontent.com/LelouchFR/skill-icons/main/assets/linkedin.svg" width="20" align="center"/>
   <a href="https://www.linkedin.com/in/akhilesh-yadav88/" target="_blank">LinkedIn</a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://raw.githubusercontent.com/LelouchFR/skill-icons/main/assets/github-dark.svg" width="22" align="center"/>
+  <img src="https://raw.githubusercontent.com/LelouchFR/skill-icons/main/assets/github-dark.svg" width="20" align="center"/>
   <a href="https://github.com/akhileshyadav8" target="_blank">GitHub</a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://raw.githubusercontent.com/LelouchFR/skill-icons/main/assets/gmail-dark.svg" width="22" align="center"/>
+  <img src="https://raw.githubusercontent.com/LelouchFR/skill-icons/main/assets/gmail-dark.svg" width="20" align="center"/>
   <a href="mailto:yadavakhil766@gmail.com">Gmail</a>
-</span>
+</p>
