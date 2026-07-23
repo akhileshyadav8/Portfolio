@@ -39,14 +39,14 @@ const About = () => (
               <Target className="text-primary" size={20} /> Career Goals
             </h3>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              I aspire to work as a Data Analyst or Data Scientist, designing data-driven 
-              workflows and machine learning pipelines that solve complex business challenges. 
-              My focus is on translating raw metrics into key operational insights.
+              I aspire to work as a Data Analyst or Machine Learning Engineer, developing data-driven 
+              workflows, predictive models, and deep learning pipelines that solve complex challenges. 
+              My focus is on translating raw metrics and unstructured text into key operational insights.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               With a background in both computer applications and advanced data science, 
-              I seek to combine software engineering practices with statistical modeling to 
-              create reliable and reproducible analytical systems.
+              I seek to combine software engineering practices with statistical modeling and 
+              neural networks to build robust analytical systems.
             </p>
           </motion.div>
 

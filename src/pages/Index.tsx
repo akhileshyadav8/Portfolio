@@ -4,7 +4,7 @@ import { ArrowRight, Download, Github, Linkedin, Mail, ExternalLink } from "luci
 import { useQuery } from "@tanstack/react-query";
 import { supabase, isSupabaseConfigured } from "@/integrations/supabase/client";
 import PageWrapper from "@/components/PageWrapper";
-import akhileshImg from "@/assets/akhilesh.png";
+import akhileshImg from "@/assets/akhilesh.jpg";
 import { portfolioData } from "@/data/portfolioData";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
@@ -102,7 +102,7 @@ const Index = () => {
                     </h1>
 
                     <p className="text-lg md:text-xl text-muted-foreground font-display font-light mb-3">
-                      Data Analyst | Data Science Postgraduate
+                      {portfolioData.profile.title}
                     </p>
 
                     <p className="text-muted-foreground max-w-md mb-6 text-sm leading-relaxed">
@@ -116,7 +116,7 @@ const Index = () => {
                       <img
                         src={akhileshImg}
                         alt="Akhilesh Yadav"
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-transparent rounded-2xl" />
                       <div className="absolute bottom-4 left-4 right-4">

@@ -45,20 +45,20 @@ export interface ResearchPaper {
 export const portfolioData = {
   profile: {
     name: "Akhilesh Yadav",
-    title: "Data Analyst | Data Science Postgraduate",
+    title: "Data Analyst | Machine Learning Engineer | NLP & Deep Learning Enthusiast",
     email: "yadavakhil766@gmail.com",
     phone: "+91 7487850787",
     location: "Surat, Gujarat, India",
     linkedin: "https://www.linkedin.com/in/akhilesh-yadav88/",
     github: "https://github.com/akhileshyadav8",
     instagram: "https://www.instagram.com/akhil_yadav972/",
-    bio: "Data Science postgraduate and detail-oriented Data Analyst with expertise in Python, SQL, Power BI, and Machine Learning. Skilled in data analysis, statistical modeling, dashboard development, and predictive analytics.",
-    detailedBio: "I am a Data Science postgraduate student and a detail-oriented Data Analyst with a solid background in Computer Applications. I specialize in building data-driven solutions, developing REST APIs using FastAPI, containerizing applications with Docker, and deploying projects on AWS. I enjoy transforming complex data into actionable business insights that drive impact.",
+    bio: "Data Science postgraduate and Machine Learning Engineer specializing in Python, SQL, Power BI, and Deep Learning. Experienced in building predictive models, NLP systems, and BI dashboards that transform data into business value.",
+    detailedBio: "I am a Data Science postgraduate student and an aspiring Machine Learning Engineer. I specialize in applying statistical models and deep learning algorithms to solve real-world problems. My experience ranges from analyzing sales and ride data to predicting environmental trends like groundwater depletion, and designing interactive BI dashboards. I build clean, containerized workflows using FastAPI, Docker, and AWS.",
     stats: {
       education: "M.Sc. Data Science",
-      specialization: "Data Analytics",
+      specialization: "Machine Learning & BI",
       projects: 5,
-      focus: "Machine Learning & BI"
+      focus: "Deep Learning & NLP"
     }
   },
   skills: [
