@@ -155,7 +155,7 @@ export const portfolioData = {
       id: "c1",
       title: "IBM Data Analyst Professional Certificate",
       institution: "Coursera",
-      completion_date: "2025",
+      completion_date: "2026",
       verification_url: "https://www.coursera.org/account/accomplishments/specialization/certificate/FQ0EJDEH69B2",
       image_url: null,
       sort_order: 1
@@ -170,22 +170,13 @@ export const portfolioData = {
       sort_order: 2
     },
     {
-      id: "c3",
-      title: "Business Intelligence Tool: Power BI",
-      institution: "Veer Narmad South Gujarat University",
-      completion_date: "2025",
-      verification_url: "https://drive.google.com/file/d/1aUPR6wpA960u4CCXV77MRT0B08YYx1LE/view",
-      image_url: null,
-      sort_order: 3
-    },
-    {
       id: "c4",
       title: "Introduction to MS Excel",
       institution: "Simplilearn",
       completion_date: "2025",
       verification_url: "https://simpli-web.app.link/e/lVACAq4C04b",
       image_url: null,
-      sort_order: 4
+      sort_order: 3
     },
     {
       id: "c5",
@@ -193,6 +184,15 @@ export const portfolioData = {
       institution: "Simplilearn",
       completion_date: "2025",
       verification_url: "https://simpli-web.app.link/e/zQkOVnbD04b",
+      image_url: null,
+      sort_order: 4
+    },
+    {
+      id: "c3",
+      title: "Business Intelligence Tool: Power BI",
+      institution: "Veer Narmad South Gujarat University",
+      completion_date: "2025",
+      verification_url: "https://drive.google.com/file/d/1aUPR6wpA960u4CCXV77MRT0B08YYx1LE/view",
       image_url: null,
       sort_order: 5
     }
