@@ -307,9 +307,17 @@ const Index = () => {
                           </span>
                         ))}
                       </div>
-                      <h3 className="text-lg font-display font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
-                        {project.title}
-                      </h3>
+                      {project.github_url ? (
+                        <a href={project.github_url} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                          <h3 className="text-lg font-display font-semibold text-foreground mb-2 hover:text-primary transition-colors inline-block">
+                            {project.title}
+                          </h3>
+                        </a>
+                      ) : (
+                        <h3 className="text-lg font-display font-semibold text-foreground mb-2">
+                          {project.title}
+                        </h3>
+                      )}
                       <p className="text-sm text-muted-foreground mb-4 line-clamp-3">{project.description}</p>
                     </div>
                     <div className="flex items-center justify-between mt-4 pt-3 border-t border-border/35">
