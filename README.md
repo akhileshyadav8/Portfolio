@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌐 Akhilesh Yadav | Data Science Portfolio
+# 🌐 Akhilesh Yadav | Portfolio
 
 A modern, responsive, and interactive portfolio website showcasing my journey in **Data Analytics, Machine Learning, Deep Learning, NLP, and Business Intelligence**.
 
