@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌐 Akhilesh Yadav | Data Science Portfolio
+# 🌐 Akhilesh Yadav | Portfolio
 
 A modern, responsive, and interactive portfolio website showcasing my journey in **Data Analytics, Machine Learning, Deep Learning, NLP, and Business Intelligence**.
 
@@ -169,37 +169,18 @@ If you found this portfolio helpful, consider giving this repository a ⭐.
 
 ## 🤝 Connect With Me
 
-<p align="center">
+<p>
+  🌐 <a href="https://akhileshyadav-portfolio-theta.vercel.app" target="_blank">Portfolio</a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 
-<a href="https://www.linkedin.com/in/akhilesh-yadav88/" target="_blank">
-<img src="https://raw.githubusercontent.com/LelouchFR/skill-icons/main/assets/linkedin.svg" width="45"/>
-</a>
+  <img src="https://raw.githubusercontent.com/LelouchFR/skill-icons/main/assets/linkedin.svg" width="20" align="center"/>
+  <a href="https://www.linkedin.com/in/akhilesh-yadav88/" target="_blank">LinkedIn</a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 
-&nbsp;&nbsp;&nbsp;
+  <img src="https://raw.githubusercontent.com/LelouchFR/skill-icons/main/assets/github-dark.svg" width="20" align="center"/>
+  <a href="https://github.com/akhileshyadav8" target="_blank">GitHub</a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 
-<a href="https://github.com/akhileshyadav8" target="_blank">
-<img src="https://raw.githubusercontent.com/LelouchFR/skill-icons/main/assets/github-dark.svg" width="45"/>
-</a>
-
-&nbsp;&nbsp;&nbsp;
-
-<a href="https://akhileshyadav-portfolio-theta.vercel.app" target="_blank">
-<img src="https://raw.githubusercontent.com/LelouchFR/skill-icons/main/assets/vercel-dark.svg" width="45"/>
-</a>
-
-&nbsp;&nbsp;&nbsp;
-
-<a href="mailto:yadavakhil766@gmail.com">
-<img src="https://raw.githubusercontent.com/LelouchFR/skill-icons/main/assets/gmail-dark.svg" width="45"/>
-</a>
-
-</p>
-
-<p align="center">
-
-<a href="https://www.linkedin.com/in/akhilesh-yadav88/">LinkedIn</a> •
-<a href="https://github.com/akhileshyadav8">GitHub</a> •
-<a href="https://akhileshyadav-portfolio-theta.vercel.app">Portfolio</a> •
-<a href="mailto:yadavakhil766@gmail.com">Gmail</a>
-
+  <img src="https://raw.githubusercontent.com/LelouchFR/skill-icons/main/assets/gmail-dark.svg" width="20" align="center"/>
+  <a href="mailto:yadavakhil766@gmail.com">Gmail</a>
 </p>
