@@ -79,7 +79,7 @@ export const portfolioData = {
     
     // Tools & Databases
     { id: "s8", name: "SQL (MySQL, MongoDB)", proficiency: 90, category: "Tools", sort_order: 12, icon_name: "Database" },
-    { id: "s9", name: "Power BI & Tableau", proficiency: 90, category: "Tools", sort_order: 13, icon_name: "Database" },
+    { id: "s9", name: "Power BI", proficiency: 90, category: "Tools", sort_order: 13, icon_name: "Database" },
     { id: "s10", name: "Streamlit", proficiency: 88, category: "Tools", sort_order: 14, icon_name: "Database" },
     { id: "s11", name: "Git & GitHub", proficiency: 85, category: "Tools", sort_order: 15, icon_name: "Database" },
     { id: "s12", name: "Excel Dashboarding", proficiency: 85, category: "Tools", sort_order: 16, icon_name: "Database" },

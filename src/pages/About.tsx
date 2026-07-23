@@ -23,7 +23,7 @@ const expertise = [
   { title: "Deep Learning", desc: "Neural networks, CNNs, RNNs, and custom model architectures for complex datasets" },
   { title: "Natural Language Processing (NLP)", desc: "Text classification, semantic search, language processing, and text analysis" },
   { title: "Computer Vision", desc: "Image analysis, object detection, and visual data preprocessing pipelines" },
-  { title: "Data Analysis & BI", desc: "Exploratory Data Analysis (EDA), statistical modeling, and interactive dashboards in Power BI and Tableau" },
+  { title: "Data Analysis & BI", desc: "Exploratory Data Analysis (EDA), statistical modeling, and interactive dashboards in Power BI" },
   { title: "Databases & APIs", desc: "Designing database structures (SQL/NoSQL) and building robust backend services using FastAPI" },
 ];
 
