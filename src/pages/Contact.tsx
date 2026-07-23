@@ -12,20 +12,23 @@ const Contact = () => {
   const [sending, setSending] = useState(false);
 
   useEffect(() => {
-    if (!isSupabaseConfigured) {
-      console.log('Supabase is not configured. Form will run in mock mode.');
-      return;
+    if (!isSupabaseConfigured && !import.meta.env.VITE_WEB3FORMS_ACCESS_KEY) {
+      console.log('Neither Supabase nor Web3Forms is configured. Form will default to local mail client.');
     }
-    const testConnection = async () => {
-      try {
-        const { data, error } = await supabase.from('user_roles').select('count');
-        console.log('Supabase connection test:', { data, error });
-      } catch (err) {
-        console.error('Supabase connection error:', err);
-      }
-    };
-    testConnection();
   }, []);
+
+  const triggerMailtoFallback = () => {
+    const subject = encodeURIComponent(`Portfolio Contact: Message from ${form.name.trim()}`);
+    const body = encodeURIComponent(
+      `Hello Akhilesh,\n\nYou have received a new message from your portfolio contact form:\n\n` +
+      `Name: ${form.name.trim()}\n` +
+      `Email: ${form.email.trim()}\n\n` +
+      `Message:\n${form.message.trim()}`
+    );
+    window.location.href = `mailto:yadavakhil766@gmail.com?subject=${subject}&body=${body}`;
+    toast.info("Opening your local mail app to send the email directly.");
+    setForm({ name: "", email: "", message: "" });
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -35,38 +38,64 @@ const Contact = () => {
     }
     
     setSending(true);
-    
-    try {
-      console.log('Form submission received:', { name: form.name, email: form.email, message: form.message });
+    let supabaseSuccess = false;
+    let emailSuccess = false;
 
-      if (!isSupabaseConfigured) {
-        // Simulate network latency
-        await new Promise(resolve => setTimeout(resolve, 800));
-        console.log('Mock submission successful (Supabase not connected)');
-        toast.success("Message sent! I'll get back to you soon.");
-        setForm({ name: "", email: "", message: "" });
-        return;
+    // 1. Log in Supabase database if configured
+    if (isSupabaseConfigured) {
+      try {
+        const { error } = await supabase
+          .from('contact_messages')
+          .insert({
+            name: form.name.trim(),
+            email: form.email.trim(),
+            message: form.message.trim()
+          });
+        if (!error) {
+          supabaseSuccess = true;
+        }
+      } catch (err) {
+        console.error('Failed to log message in Supabase:', err);
       }
-      
-      // Insert the message into database
-      const { data, error } = await supabase
-        .from('contact_messages')
-        .insert({
-          name: form.name.trim(),
-          email: form.email.trim(),
-          message: form.message.trim()
-        })
-        .select();
-      
-      if (error) throw error;
-      
-      toast.success("Message sent! I'll get back to you soon.");
+    }
+
+    // 2. Send email via Web3Forms if access key is set
+    const web3formsKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+    if (web3formsKey) {
+      try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            access_key: web3formsKey,
+            name: form.name.trim(),
+            email: form.email.trim(),
+            message: form.message.trim(),
+            subject: `Portfolio Contact from ${form.name.trim()}`,
+            from_name: `${form.name.trim()} (Via Portfolio)`,
+            to_name: "Akhilesh Yadav",
+          }),
+        });
+        const result = await response.json();
+        if (result.success) {
+          emailSuccess = true;
+        }
+      } catch (err) {
+        console.error('Failed to send email via Web3Forms:', err);
+      }
+    }
+
+    setSending(false);
+
+    // Evaluate response and trigger fallback if no background process succeeded
+    if (emailSuccess || supabaseSuccess) {
+      toast.success("Message sent successfully!");
       setForm({ name: "", email: "", message: "" });
-    } catch (error: any) {
-      console.error('Error sending message:', error);
-      toast.error(`Failed to send message. Please try again or email me directly at ${portfolioData.profile.email}`);
-    } finally {
-      setSending(false);
+    } else {
+      triggerMailtoFallback();
     }
   };
 
