@@ -161,13 +161,7 @@ That's it.
 
 ---
 
-## ⭐ Support
-
-If you found this portfolio helpful, consider giving this repository a ⭐.
-
----
-
-## 🤝 Connect With Me
+## 🔗 Connect With Me
 
 <p>
   🌐 <a href="https://akhileshyadav-portfolio-theta.vercel.app" target="_blank">Portfolio</a>
@@ -184,3 +178,7 @@ If you found this portfolio helpful, consider giving this repository a ⭐.
   <img src="https://raw.githubusercontent.com/LelouchFR/skill-icons/main/assets/gmail-dark.svg" width="20" align="center"/>
   <a href="mailto:yadavakhil766@gmail.com">Gmail</a>
 </p>
+
+---
+
+⭐ If you found this portfolio helpful, consider giving this repository a star.
