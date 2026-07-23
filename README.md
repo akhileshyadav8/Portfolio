@@ -50,19 +50,19 @@ Whether you're a recruiter, fellow developer, or data enthusiast, this portfolio
 
 ### 🏠 Home
 
-> Add Screenshot Here
+![Home](src/assets/home.png)
 
 ---
 
 ### 📂 Projects
 
-> Add Screenshot Here
+![Projects](src/assets/projects.png)
 
 ---
 
 ### 🏆 Certifications
 
-> Add Screenshot Here
+![Certifications](src/assets/certifications.png)
 
 ---
 
