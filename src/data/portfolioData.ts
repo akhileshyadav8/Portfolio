@@ -52,7 +52,7 @@ export const portfolioData = {
     linkedin: "https://www.linkedin.com/in/akhilesh-yadav88/",
     github: "https://github.com/akhileshyadav8",
     instagram: "https://www.instagram.com/akhil_yadav972/",
-    bio: "Data Science postgraduate and Machine Learning Engineer specializing in Python, SQL, Power BI, and Deep Learning. Experienced in building predictive models, NLP systems, and BI dashboards that transform data into business value.",
+    bio: "Data Science postgraduate specializing in Data Analytics, Machine Learning, NLP, and Deep Learning. Passionate about building data-driven solutions using Python, SQL, Excel and Power BI to solve real-world problems.",
     detailedBio: "I am a Data Science postgraduate student and an aspiring Machine Learning Engineer. I specialize in applying statistical models and deep learning algorithms to solve real-world problems. My experience ranges from analyzing sales and ride data to predicting environmental trends like groundwater depletion, and designing interactive BI dashboards. I build clean, containerized workflows using FastAPI, Docker, and AWS.",
     stats: {
       education: "M.Sc. Data Science",
