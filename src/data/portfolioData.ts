@@ -177,6 +177,24 @@ export const portfolioData = {
       verification_url: "https://drive.google.com/file/d/1aUPR6wpA960u4CCXV77MRT0B08YYx1LE/view",
       image_url: null,
       sort_order: 3
+    },
+    {
+      id: "c4",
+      title: "Introduction to MS Excel",
+      institution: "Simplilearn",
+      completion_date: "2025",
+      verification_url: "https://simpli-web.app.link/e/lVACAq4C04b",
+      image_url: null,
+      sort_order: 4
+    },
+    {
+      id: "c5",
+      title: "Python for Beginners",
+      institution: "Simplilearn",
+      completion_date: "2025",
+      verification_url: "https://simpli-web.app.link/e/zQkOVnbD04b",
+      image_url: null,
+      sort_order: 5
     }
   ] as Certification[],
   
