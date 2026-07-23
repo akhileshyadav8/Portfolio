@@ -4,7 +4,7 @@ import { ArrowRight, Download, Github, Linkedin, Mail, ExternalLink } from "luci
 import { useQuery } from "@tanstack/react-query";
 import { supabase, isSupabaseConfigured } from "@/integrations/supabase/client";
 import PageWrapper from "@/components/PageWrapper";
-import akhileshImg from "@/assets/akhilesh.jpg";
+import akhileshImg from "@/assets/akhilesh.png";
 import { portfolioData } from "@/data/portfolioData";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
@@ -115,11 +115,11 @@ const Index = () => {
                     {/* Soft background glow to blend the black card nicely in light theme & add premium feel in dark theme */}
                     <div className="absolute w-full max-w-[280px] sm:max-w-[320px] aspect-[3/4] bg-gradient-to-tr from-primary/20 via-primary/5 to-secondary/30 rounded-2xl blur-2xl opacity-70 dark:opacity-40 group-hover:opacity-100 transition-opacity duration-700" />
                     
-                    <div className="relative w-full max-w-[280px] sm:max-w-[320px] aspect-[3/4] overflow-hidden rounded-2xl border border-border/30 shadow-2xl bg-black">
+                    <div className="relative w-full max-w-[280px] sm:max-w-[320px] aspect-[3/4] overflow-hidden rounded-2xl border border-border/30 shadow-2xl bg-secondary/20 dark:bg-black">
                       <img
                         src={akhileshImg}
                         alt="Akhilesh Yadav"
-                        className="w-full h-full object-contain bg-black group-hover:scale-105 transition-transform duration-700"
+                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-transparent rounded-2xl" />
                       <div className="absolute bottom-4 left-4 right-4">
