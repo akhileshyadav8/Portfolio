@@ -1,113 +1,205 @@
-# Akhilesh Yadav | Professional Data Science Portfolio
+<div align="center">
 
-This is a modern, responsive, and highly interactive bento-grid portfolio website built for **Akhilesh Yadav** (Data Analyst & Data Science Postgraduate). 
+# 🌐 Akhilesh Yadav | Data Science Portfolio
 
-Live Local Preview: [http://localhost:8081](http://localhost:8081)
+A modern, responsive, and interactive portfolio website showcasing my journey in **Data Analytics, Machine Learning, Deep Learning, NLP, and Business Intelligence**.
 
----
+### 🚀 [Live Demo](https://akhileshyadav-portfolio-theta.vercel.app)
 
-## 👤 About Akhilesh Yadav
-I am a Data Science postgraduate student (M.Sc. at Chandigarh University) and a detail-oriented Data Analyst. I specialize in:
-- **Data Analytics & BI**: Statistical modeling, Exploratory Data Analysis (EDA), and building interactive dashboards using **Power BI**, **Tableau**, and **Excel**.
-- **Machine Learning & Deep Learning**: Designing regression/classification models, Feature Engineering, Neural Networks, **NLP**, and **Computer Vision** pipelines.
-- **Backend & APIs**: Developing REST APIs using **FastAPI** & **Pydantic**.
-- **Tools**: Git/GitHub, Docker containerization, Streamlit, and AWS EC2 deployments.
+</div>
 
 ---
 
-## 🛠️ Technology Stack
-- **Core**: React 18, Vite (Fast build tool), TypeScript
-- **Styling**: Tailwind CSS (Fluid grid and layouts), Framer Motion (Smooth page transitions & entrance micro-animations)
-- **UI Components**: Radix UI primitives styled with Shadcn UI (Dialogs, Accordeons, Toast notifications)
-- **Backend (Optional)**: Supabase (PostgreSQL Database & Storage bucket for resume files)
-- **State Management & Queries**: TanStack React Query
+## 📖 About
+
+This portfolio is designed to present my technical skills, projects, research, certifications, and professional experience in a clean and interactive way.
+
+Whether you're a recruiter, fellow developer, or data enthusiast, this portfolio provides a complete overview of my work and learning journey.
 
 ---
 
-## 🚀 Features
-1. **Bento Grid Hero Layout**: Premium, clean look presenting career highlights, core skills, profile picture, and a quick contact CTA.
-2. **Interactive Power BI Dashboards**: Seamless iframe preview modals inside the Projects section so visitors can interact with Power BI dashboards (like the Spotify Analytics report) directly on the website without leaving.
-3. **Double-Layer Data Flow**:
-   - **Static Data Fallback**: Runs out-of-the-box using local data in `src/data/portfolioData.ts`. Absolutely zero database setup is required to run the site.
-   - **Supabase Integration**: If connected, it queries your database tables dynamically and provides an admin panel (`/admin`) to manage skills, projects, and messages.
-4. **Branding & Custom SEO**: Formatted for semantic HTML and pre-configured metadata tags for optimal SEO ranking.
+## 🖥️ Portfolio Sections
+
+- 🏠 Home
+- 👨‍💻 About
+- 🛠️ Skills
+- 📂 Projects
+- 📄 Research
+- 🏆 Certifications
+- 📞 Contact
 
 ---
 
-## 💻 Local Setup & Customization
+## 💻 Tech Stack
 
-If you want to run this portfolio on your own machine or customize it with your own credentials, follow these steps:
+**Frontend:** React 18, TypeScript, Vite
 
-### 1. Prerequisites
-Make sure you have [Node.js](https://nodejs.org/) installed (version 18+ recommended).
+**Styling:** Tailwind CSS, Framer Motion
 
-### 2. Clone and Install
+**UI Components:** Shadcn UI, Radix UI
+
+**Backend (Optional):** Supabase
+
+**State Management:** TanStack React Query
+
+**Deployment:** Vercel
+
+---
+
+## 📷 Screenshots
+
+### 🏠 Home
+
+> Add Screenshot Here
+
+---
+
+### 📂 Projects
+
+> Add Screenshot Here
+
+---
+
+### 🏆 Certifications
+
+> Add Screenshot Here
+
+---
+
+## 🚀 Run Locally
+
+### 1️⃣ Clone the repository
+
 ```bash
-# Clone the repository
 git clone https://github.com/akhileshyadav8/Portfolio.git
+```
 
-# Navigate to the folder
+### 2️⃣ Navigate into the project
+
+```bash
 cd Portfolio
+```
 
-# Install all dependencies
+### 3️⃣ Install dependencies
+
+```bash
 npm install
 ```
 
-### 3. Run the Development Server
+### 4️⃣ Start the development server
+
 ```bash
 npm run dev
 ```
-Open your browser and navigate to `http://localhost:8081/`.
 
-### 4. Customizing Your Information
-The portfolio has a single source of truth for static data. You do not need to rewrite code across multiple pages:
-- Open [src/data/portfolioData.ts](src/data/portfolioData.ts).
-- Edit the `profile` object (name, title, bio, email, socials).
-- Edit the `skills` array (add your own skills and set the proficiency level from `0` to `100`).
-- Edit the `projects` array (add your repository links and titles).
-- Edit the `certifications` array (add your institutions, dates, and verification links).
-- Replace the profile photo in [src/assets/akhilesh.png](src/assets/akhilesh.png) with your own picture (using the same file name or updating the import in `Index.tsx`).
-- Replace the PDF in `public/Resume.pdf` with your own resume file.
----
+Open your browser and visit
 
-## 🌐 How to Host Your Portfolio
-
-Hosting this React project is free and takes less than 5 minutes. The recommended platform is **Vercel** (which the project is pre-configured for via `vercel.json` and build scripts).
-
-### Method 1: Automatic Deployments via GitHub (Recommended)
-1. Push your local Git repository to GitHub (refer to the instructions below).
-2. Go to [Vercel](https://vercel.com/) and sign in with your GitHub account.
-3. Click **Add New** ➡️ **Project**.
-4. Import your portfolio repository from the list.
-5. Vercel will automatically detect **Vite** as the framework. Keep the default settings.
-6. Click **Deploy**. 
-   - *Your site is now live! Every time you run `git push`, Vercel will automatically rebuild and update your live website.*
-
-### Method 2: Deploying via Vercel CLI
-If you want to deploy straight from your local terminal:
-```bash
-# Install Vercel CLI globally
-npm install -g vercel
-
-# Run the login command and link your project
-vercel login
-
-# Deploy your project
-vercel
 ```
-To deploy to production after making changes:
-```bash
-vercel --prod
+http://localhost:8081
 ```
 
 ---
 
-# Author (Connect With Me)
+# 🎨 Customize This Portfolio
 
-**Akhilesh Yadav**
+If you'd like to use this portfolio as your own:
 
-- **LinkedIn:** https://www.linkedin.com/in/akhilesh-yadav88/
-- **Portfolio:** https://akhileshyadav8.github.io/
-- **Email:** yadavakhil766@gmail.com
+### Update your personal information
+
+Open
+
+```
+src/data/portfolioData.ts
+```
+
+Modify:
+
+- Profile Details
+- Skills
+- Projects
+- Research
+- Certifications
+- Social Links
 
 ---
+
+### Replace Profile Image
+
+Replace
+
+```
+src/assets/akhilesh.png
+```
+
+with your own image.
+
+---
+
+### Replace Resume
+
+Replace
+
+```
+public/Resume.pdf
+```
+
+with your resume.
+
+---
+
+### Deploy
+
+The easiest way is using **Vercel**.
+
+1. Push your project to GitHub.
+
+2. Import the repository into Vercel.
+
+3. Click **Deploy**.
+
+That's it.
+
+---
+
+## ⭐ Support
+
+If you found this portfolio helpful, consider giving this repository a ⭐.
+
+---
+
+## 🤝 Connect With Me
+
+<p align="center">
+
+<a href="https://www.linkedin.com/in/akhilesh-yadav88/" target="_blank">
+<img src="https://raw.githubusercontent.com/LelouchFR/skill-icons/main/assets/linkedin.svg" width="45"/>
+</a>
+
+&nbsp;&nbsp;&nbsp;
+
+<a href="https://github.com/akhileshyadav8" target="_blank">
+<img src="https://raw.githubusercontent.com/LelouchFR/skill-icons/main/assets/github-dark.svg" width="45"/>
+</a>
+
+&nbsp;&nbsp;&nbsp;
+
+<a href="https://akhileshyadav-portfolio-theta.vercel.app" target="_blank">
+<img src="https://raw.githubusercontent.com/LelouchFR/skill-icons/main/assets/vercel-dark.svg" width="45"/>
+</a>
+
+&nbsp;&nbsp;&nbsp;
+
+<a href="mailto:yadavakhil766@gmail.com">
+<img src="https://raw.githubusercontent.com/LelouchFR/skill-icons/main/assets/gmail-dark.svg" width="45"/>
+</a>
+
+</p>
+
+<p align="center">
+
+<a href="https://www.linkedin.com/in/akhilesh-yadav88/">LinkedIn</a> •
+<a href="https://github.com/akhileshyadav8">GitHub</a> •
+<a href="https://akhileshyadav-portfolio-theta.vercel.app">Portfolio</a> •
+<a href="mailto:yadavakhil766@gmail.com">Gmail</a>
+
+</p>
