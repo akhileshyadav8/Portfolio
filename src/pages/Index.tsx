@@ -111,8 +111,8 @@ const Index = () => {
                   </div>
 
                   {/* Profile Image - spans 1 column */}
-                  <div className="md:col-span-1 relative group">
-                    <div className="relative w-full h-60 sm:h-72 md:h-64 lg:h-96 xl:h-[400px] overflow-hidden rounded-2xl">
+                  <div className="md:col-span-1 relative group flex justify-center items-center">
+                    <div className="relative w-full max-w-[280px] sm:max-w-[320px] aspect-[3/4] overflow-hidden rounded-2xl border border-border/30 shadow-2xl bg-secondary/10">
                       <img
                         src={akhileshImg}
                         alt="Akhilesh Yadav"
