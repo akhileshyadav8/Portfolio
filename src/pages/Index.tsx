@@ -112,6 +112,9 @@ const Index = () => {
 
                   {/* Profile Image - spans 1 column */}
                   <div className="md:col-span-1 relative group flex justify-center items-center">
+                    {/* Soft background glow to blend the black card nicely in light theme & add premium feel in dark theme */}
+                    <div className="absolute w-full max-w-[280px] sm:max-w-[320px] aspect-[3/4] bg-gradient-to-tr from-primary/20 via-primary/5 to-secondary/30 rounded-2xl blur-2xl opacity-70 dark:opacity-40 group-hover:opacity-100 transition-opacity duration-700" />
+                    
                     <div className="relative w-full max-w-[280px] sm:max-w-[320px] aspect-[3/4] overflow-hidden rounded-2xl border border-border/30 shadow-2xl bg-black">
                       <img
                         src={akhileshImg}
