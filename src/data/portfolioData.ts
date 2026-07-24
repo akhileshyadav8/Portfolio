@@ -152,13 +152,22 @@ export const portfolioData = {
   
   certifications: [
     {
+      id: "c6",
+      title: "Complete Data Science, Machine Learning, DL, NLP Bootcamp",
+      institution: "Udemy",
+      completion_date: "2026",
+      verification_url: "https://www.udemy.com/certificate/UC-6fd2726c-7038-46e7-86d3-0369ac091520/",
+      image_url: null,
+      sort_order: 1
+    },
+    {
       id: "c1",
       title: "IBM Data Analyst Professional Certificate",
       institution: "Coursera",
       completion_date: "2026",
       verification_url: "https://www.coursera.org/account/accomplishments/specialization/certificate/FQ0EJDEH69B2",
       image_url: null,
-      sort_order: 1
+      sort_order: 2
     },
     {
       id: "c2",
@@ -167,7 +176,7 @@ export const portfolioData = {
       completion_date: "2025",
       verification_url: "https://www.hackerrank.com/certificates/82d07ffa52a3",
       image_url: null,
-      sort_order: 2
+      sort_order: 3
     },
     {
       id: "c4",
@@ -176,7 +185,7 @@ export const portfolioData = {
       completion_date: "2025",
       verification_url: "https://simpli-web.app.link/e/lVACAq4C04b",
       image_url: null,
-      sort_order: 3
+      sort_order: 4
     },
     {
       id: "c5",
@@ -185,7 +194,7 @@ export const portfolioData = {
       completion_date: "2025",
       verification_url: "https://simpli-web.app.link/e/zQkOVnbD04b",
       image_url: null,
-      sort_order: 4
+      sort_order: 5
     },
     {
       id: "c3",
@@ -194,7 +203,7 @@ export const portfolioData = {
       completion_date: "2025",
       verification_url: "https://drive.google.com/file/d/1aUPR6wpA960u4CCXV77MRT0B08YYx1LE/view",
       image_url: null,
-      sort_order: 5
+      sort_order: 6
     }
   ] as Certification[],
   
